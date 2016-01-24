@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
     table.string('name');
     table.float('current_price');
     table.integer('volume');
+    table.dateTime('last_update');
   })
   .then(function(){
     return knex.schema.createTable('users', function(table){
